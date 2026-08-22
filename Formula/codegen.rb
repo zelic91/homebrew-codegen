@@ -5,21 +5,21 @@
 class Codegen < Formula
   desc "Gen code for AI."
   homepage "https://zeliclabs.com"
-  version "1.8.1"
+  version "1.8.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zelic91/codegen-binaries/releases/download/v1.8.1/codegen-binaries_Darwin_x86_64.tar.gz"
-      sha256 "b1f1d1c06a097041bf5af038d01ce5b44c90ece86a24b369f67ebf12f13e0f6c"
+      url "https://github.com/zelic91/codegen-binaries/releases/download/v1.8.2/codegen-binaries_Darwin_x86_64.tar.gz"
+      sha256 "850ee87228935d6015a1d4ec156ce833ab96b0d94c3aed29569b4c7bfc08eefe"
 
       define_method(:install) do
         bin.install "codegen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zelic91/codegen-binaries/releases/download/v1.8.1/codegen-binaries_Darwin_arm64.tar.gz"
-      sha256 "cfff05a94bdc1cdf671ba9302997f905630f3af59514dfcd85be6d0e84608e26"
+      url "https://github.com/zelic91/codegen-binaries/releases/download/v1.8.2/codegen-binaries_Darwin_arm64.tar.gz"
+      sha256 "61020f1778bf20c4e8a4469e5fe634b243f515f424c53799ada2c6cf22f8bc78"
 
       define_method(:install) do
         bin.install "codegen"
@@ -29,15 +29,15 @@ class Codegen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zelic91/codegen-binaries/releases/download/v1.8.1/codegen-binaries_Linux_x86_64.tar.gz"
-      sha256 "b894773cac211fd6123e995400ecf30c9b02f520f75816d921ab85a0ec6f5b30"
+      url "https://github.com/zelic91/codegen-binaries/releases/download/v1.8.2/codegen-binaries_Linux_x86_64.tar.gz"
+      sha256 "719987cd815b7e85b5de0ae3c98705e7bee52f2a721af0cf2df3e1e53c010479"
       define_method(:install) do
         bin.install "codegen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zelic91/codegen-binaries/releases/download/v1.8.1/codegen-binaries_Linux_arm64.tar.gz"
-      sha256 "b0d45af6049d82594e3b5a2e2094ca9cca4eff3125baa51d1bda8249bdceba80"
+      url "https://github.com/zelic91/codegen-binaries/releases/download/v1.8.2/codegen-binaries_Linux_arm64.tar.gz"
+      sha256 "81c42b8c3e85d7b354d5a67c77f00fcb9646ffe6bc7d3da89c2a4941848041fb"
       define_method(:install) do
         bin.install "codegen"
       end
